@@ -8,8 +8,10 @@ import org.springframework.web.socket.config.annotation.*;
 @EnableWebSocketMessageBroker
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
+    //STOMP = Simple Text Oriented Messaging Protocol
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
+        //withSockJS() is concerned if the website do not support WebSocket. Just in case
         registry.addEndpoint("/ws").withSockJS();
     }
 

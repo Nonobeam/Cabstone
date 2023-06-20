@@ -9,7 +9,8 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./data/db:/var/lib/mysql
+      - db:/var/lib/mysql
+      - chat-message:/container-path-1
     environment:
       MYSQL_DATABASE: "Manager_Alumni"
       MYSQL_USER: "Nonobeam"
@@ -25,3 +26,9 @@ services:
     environment:
       PMA_HOST: mysql
       PMA_PORT: 3306
+
+volumes:
+  db:
+    driver: local
+  chat-message:
+    driver: local

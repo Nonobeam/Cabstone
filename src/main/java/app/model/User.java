@@ -1,14 +1,28 @@
 package app.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 import javax.print.DocFlavor;
 
 @Entity
+@Table(name = "Members")
 public class User { //id
+	public enum Provider{
+		LOCAL
+		, GOOGLE
+	}
+
+	@Enumerated(EnumType.STRING)
+	private Provider provider;
+
+	public Provider getProvider() {
+		return provider;
+	}
+
+	public void setProvider(Provider provider) {
+		this.provider = provider;
+	}
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
@@ -16,6 +30,12 @@ public class User { //id
 	protected Integer age;
 	protected String mail;
 	protected String code = "";
+
+
+
+	protected boolean accountNonExpired;
+
+	protected boolean accountNonLocked;
 
 	public User(){
 

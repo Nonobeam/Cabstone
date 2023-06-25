@@ -12,7 +12,7 @@ public class DefaultController {
 
     @GetMapping(value = "/")
     public void redirect(HttpServletResponse response) throws IOException {
-        response.sendRedirect("/swagger-ui.html");
+        response.sendRedirect("/swagger-ui/index.html#/");
     }
 
 }

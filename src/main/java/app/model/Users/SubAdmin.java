@@ -1,7 +1,14 @@
-package app.model.admin;
+package app.model.Users;
 
-import app.model.User;
+public class SubAdmin extends User implements Association{
 
-public class SubAdmin extends User {
+    @Override
+    public String extractCode(String mail) {
+        return null;
+    }
 
+    @Override
+    public boolean checkRole() {
+        return false;
+    }
 }

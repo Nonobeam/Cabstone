@@ -1,2 +1,4 @@
-package app.model.Users;public class Team {
+package app.model.Users;
+
+public class Team {
 }

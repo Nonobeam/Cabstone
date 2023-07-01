@@ -1,7 +1,7 @@
 package app.service;
 
 
-import app.model.User;
+import app.model.Users.User;
 
 public interface UserService {
     User create(User user);

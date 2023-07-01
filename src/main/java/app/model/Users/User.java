@@ -1,4 +1,4 @@
-package app.model;
+package app.model.Users;
 
 
 
@@ -7,7 +7,7 @@ import javax.print.DocFlavor;
 
 @Entity
 @Table(name = "Members")
-public interface User { //id
+public class User { //id
 //	public enum Provider{
 //		LOCAL
 //		, GOOGLE
@@ -30,6 +30,8 @@ public interface User { //id
 	protected Integer age;
 	protected String mail;
 	protected String code = "";
+
+	protected boolean role;
 
 	protected boolean accountNonExpired;
 
@@ -67,21 +69,6 @@ public interface User { //id
 
 	public void setMail(String mail) {
 		this.mail = mail;
-	}
-
-	@Override
-	public void extractCode(String mail) {
-		try {
-			if (!mail.matches("(.*)@fpt.edu(.*)")){
-				throw new IllegalArgumentException("Not fpt mail so please input your Alumni Code");
-			}
-			int startIndex = mail.indexOf('S');
-			if (startIndex != -1 && startIndex + 8 <= mail.length()) {
-				code = mail.substring(startIndex, startIndex + 8);
-			}
-		}catch (IllegalArgumentException e){
-			e.getMessage();
-		}
 	}
 
 }

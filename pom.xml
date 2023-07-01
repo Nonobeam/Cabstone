@@ -90,9 +90,9 @@
 		    -->
 			<scope>runtime</scope>
 		</dependency>
-		
-		
-	<!-- Testing related dependencies -->
+
+
+		<!-- Testing related dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

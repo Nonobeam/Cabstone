@@ -7,22 +7,22 @@ import javax.print.DocFlavor;
 
 @Entity
 @Table(name = "Members")
-public class User { //id
-	public enum Provider{
-		LOCAL
-		, GOOGLE
-	}
+public interface User { //id
+//	public enum Provider{
+//		LOCAL
+//		, GOOGLE
+//	}
 
-	@Enumerated(EnumType.STRING)
-	private Provider provider;
-
-	public Provider getProvider() {
-		return provider;
-	}
-
-	public void setProvider(Provider provider) {
-		this.provider = provider;
-	}
+//	@Enumerated(EnumType.STRING)
+//	private Provider provider;
+//
+//	public Provider getProvider() {
+//		return provider;
+//	}
+//
+//	public void setProvider(Provider provider) {
+//		this.provider = provider;
+//	}
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
@@ -30,8 +30,6 @@ public class User { //id
 	protected Integer age;
 	protected String mail;
 	protected String code = "";
-
-
 
 	protected boolean accountNonExpired;
 
@@ -71,12 +69,19 @@ public class User { //id
 		this.mail = mail;
 	}
 
+	@Override
 	public void extractCode(String mail) {
-		int startIndex = mail.indexOf('S');
-		if (startIndex != -1 && startIndex + 8 <= mail.length()) {
-			code = mail.substring(startIndex, startIndex + 8);
+		try {
+			if (!mail.matches("(.*)@fpt.edu(.*)")){
+				throw new IllegalArgumentException("Not fpt mail so please input your Alumni Code");
+			}
+			int startIndex = mail.indexOf('S');
+			if (startIndex != -1 && startIndex + 8 <= mail.length()) {
+				code = mail.substring(startIndex, startIndex + 8);
+			}
+		}catch (IllegalArgumentException e){
+			e.getMessage();
 		}
-
 	}
 
 }

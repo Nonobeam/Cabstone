@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color:#fff;
+}
+
+/*                        pagelogin-header                       */
+.pagelogin-header {
+    width: 100%;
+    height: 335px;
+    background-image: url("../picture/pagelogin-header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pagelogin-header img {
+    margin-left: 120px;
+}
+
+.pagelogin-header #log-in {
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 900px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 80px;
+    background: none;
+    cursor: pointer;
+}
+
+/*                    pa.pagelogin-content                    */
+.pagelogin-content {
+    height: 420px;
+    width: 100%;
+}
+
+.pagelogin-content .container {
+    margin-left: 80px;
+    margin-right: 300px;
+
+}
+
+.pagelogin-content .container h1 {
+    margin-top: 65px;
+    margin-bottom: 40px;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.pagelogin-content .container p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.pagelogin-content .line {
+    margin: 100px 80px 0 80px;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+/*                  .pagelogin-footer                        */
+.pagelogin-footer {
+    margin: 0 80px;
+    display: flex;
+    justify-content: space-around;
+}
+.pagelogin-footer #p1 {
+    top:0;
+    left: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.pagelogin-footer #p2 {
+    top:0;
+    right: 0;
+    font-size: 20px;
+    font-weight: 700;
+}

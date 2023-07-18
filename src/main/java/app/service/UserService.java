@@ -3,11 +3,14 @@ package app.service;
 
 import app.model.Users.User;
 
+import java.util.List;
+
 public interface UserService {
     User create(User user);
-    User update(Long id, User user);
-    void delete(Long id);
-    Iterable<User> findAll();
-    User findById(Long id);
+    User update(String code, User user);
+    void delete(String name);
+    List<User> findAll();
+    List<User> findByName(String userName);
 
+    String save(User user);
 }

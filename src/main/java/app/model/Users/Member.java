@@ -1,14 +1,6 @@
 package app.model.Users;
 
 public class Member extends User implements Association{
-
-    public Member(){
-
-    }
-
-    public Member(String name, int age, String mail){
-        super(name, age, mail);
-    }
     @Override
     public String extractCode(String mail){
         try {

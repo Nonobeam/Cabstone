@@ -9,13 +9,20 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/member")
+@CrossOrigin(origins = "*")
 public class PathController {
 
 	@Autowired
 	private UserService userService;
 
-	@GetMapping
+	@PostMapping("/add")
+	public String add(@RequestBody User user){
+		userService.create(user);
+		return "New member is added";
+	}
+
+	@GetMapping("/allUser")
 	public List<User> getAllUsers(){
 		return (List<User>) userService.findAll();
 	}

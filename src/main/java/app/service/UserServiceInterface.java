@@ -40,8 +40,4 @@ public class UserServiceInterface implements UserService{
         return userRepository.findByName(userName);
     }
 
-    @Override
-    public String save(User user) {
-        return null;
-    }
 }

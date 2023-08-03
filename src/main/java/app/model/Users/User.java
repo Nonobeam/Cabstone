@@ -38,7 +38,7 @@ public class User { //id
 	protected String mail;
 	protected String code = "";
 
-	protected boolean role;
+	protected String role = "Normal Member";
 
 	protected boolean accountNonExpired;
 

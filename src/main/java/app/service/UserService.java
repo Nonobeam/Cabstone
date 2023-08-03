@@ -12,5 +12,4 @@ public interface UserService {
     List<User> findAll();
     List<User> findByName(String userName);
 
-    String save(User user);
 }

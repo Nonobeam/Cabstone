@@ -14,7 +14,13 @@ export default function Member() {
         e.preventDefault()
         const member={name,age,mail,code}
         console.log(member)
-        fetch("https://localhost")
+        fetch("http://localhost:8080/member/add",{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(member)
+        }).then(()=>{
+            console.log("New Student added")
+        })
     }
 
     return (

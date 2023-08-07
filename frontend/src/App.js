@@ -2,8 +2,11 @@ import React from 'react';
 import { useEffect } from 'react'
 import jwt_decode from "jwt-decode"
 import './App.css'
+import Register from "./component/pages/public/register/Register";
+import MemberTable from "./component/pages/private/MemberTable";
 
 function App() {
+  const google = window.google
 
   function handleCallbackResponse(response){
     console.log("TOKEN: " + response.credential)
@@ -26,6 +29,8 @@ function App() {
 
   return (
     <div>
+      <Register/>
+      <MemberTable/>
       <div id = "signInDiv"></div>
     </div>
   )

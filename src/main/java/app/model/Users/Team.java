@@ -47,7 +47,7 @@ public class Team {
     }
     public void displayAllGroups(){
         this.group.forEach((groupName, memberCode) ->{
-            System.out.println(groupName + ":" + " , " + getMember(memberCode).getName());
+            //System.out.println(groupName + ":" + " , " + getMember(memberCode).getName());
             //method getMember(memberCode) viet sau ha
         });
     }

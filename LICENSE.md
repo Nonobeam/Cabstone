@@ -23,6 +23,6 @@ THE SOFTWARE.**
 ## Support and Contributions
 
 If you find this project useful, please consider giving it a star on GitHub. Your support is greatly appreciated! If you have any questions, feedback, or would like to contribute, please open an issue or a pull request.
-
+.
 
 

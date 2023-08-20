@@ -1,4 +1,4 @@
-package app.controller.userController;
+package app.controller;
 
 
 import app.model.Users.User;

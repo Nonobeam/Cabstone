@@ -2,6 +2,7 @@ package app.service;
 
 
 import app.model.Users.User;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 import java.util.List;
 
@@ -11,5 +12,6 @@ public interface UserService {
     void delete(String name);
     List<User> findAll();
     List<User> findByName(String userName);
+
 
 }
